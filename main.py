@@ -19,4 +19,4 @@ for row in sheet_data:
     if flight_price < row['lowestPrice'] and flight_price > 0:
         print("Preparing notification to send...")
         notification_info = NotificationManager(search_data["data"][0])
-        notification_info.send_sms_notification()
+        notification_info.send_email_notification()
