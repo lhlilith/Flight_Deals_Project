@@ -17,7 +17,7 @@ class NotificationManager:
         self.inbound_date = search_data["route"][1]["utc_departure"]
         self.flight_link = search_data["deep_link"]
 
-    def send_sms_notification(self):
+    def send_email_notification(self):
         with smtplib.SMTP("smtp.gmail.com") as connection:
             body = f"Low price alert! Only ${self.price} to fly from \
 {self.departure_city}-{self.departure_airport_code} to {self.arrival_city}-{self.arrival_airport_code}\
